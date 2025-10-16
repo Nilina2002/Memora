@@ -1,0 +1,19 @@
+(# Root-level ignores)
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+npm-debug.log*
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Build outputs
+dist/
+build/
+
