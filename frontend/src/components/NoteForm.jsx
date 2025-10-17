@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React from 'react'
+
 
 const NoteForm = ({ onAdd, loading }) => {
     const [title, setTitle] = useState("");

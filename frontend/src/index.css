@@ -1,8 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* App shell background and text defaults */
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
+
+/* stylelint-enable at-rule-no-unknown */

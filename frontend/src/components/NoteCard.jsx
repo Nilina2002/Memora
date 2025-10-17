@@ -1,3 +1,6 @@
+import React from 'react'
+
+
 const NoteCard = ({ note, onDelete }) => {
     return (
         <li className="group rounded-xl p-3 flex justify-between items-start gap-3 bg-white border shadow-sm hover:shadow-md transition-shadow">

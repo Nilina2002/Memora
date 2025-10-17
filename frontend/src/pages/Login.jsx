@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import React from 'react'
+
 
 const Login = () => {
     const { login } = useAuth();
@@ -26,7 +28,7 @@ const Login = () => {
     return (
         <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
             <div className="w-full max-w-md bg-white border rounded-2xl shadow-sm p-6">
-                <h2 className="text-2xl font-semibold mb-1">Welcome back</h2>
+                <h2 className="text-xl font-semibold mb-1">Welcome back</h2>
                 <p className="text-sm text-gray-600 mb-6">Sign in to continue to your notes</p>
                 {error ? <div className="mb-3 text-sm text-red-600">{error}</div> : null}
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">

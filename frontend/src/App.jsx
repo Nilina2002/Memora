@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Notes from "./pages/Notes";
 import Navbar from "./components/Navbar";
 import { useAuth } from "./context/AuthContext";
+import React from 'react'
+
 
 function App() {
   return (

@@ -3,6 +3,8 @@ import API from "../api/axios";
 import NoteForm from "../components/NoteForm";
 import NoteCard from "../components/NoteCard";
 import Sidebar from "../components/Sidebar";
+import React from 'react'
+
 
 const Notes = () => {
     const [notes, setNotes] = useState([]);
@@ -58,7 +60,7 @@ const Notes = () => {
 
     return (
         <div className="flex min-h-[100vh] bg-gray-50">
-            <Sidebar onCreate={() => {}} />
+            <Sidebar onCreate={() => { }} />
             <main className="flex-1 p-6">
                 <div className="max-w-5xl mx-auto">
                     <div className="flex items-center justify-between mb-4">
@@ -104,7 +106,7 @@ const Notes = () => {
                             </div>
                         </div>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                            {["BL","Fi","TP","Sh","Pe"].map((abbr) => (
+                            {["BL", "Fi", "TP", "Sh", "Pe"].map((abbr) => (
                                 <div key={abbr} className="flex flex-col items-center gap-2">
                                     <div className="h-16 w-16 rounded-md bg-gradient-to-b from-orange-300 to-orange-500 shadow-inner flex items-center justify-center text-white font-semibold">
                                         {abbr}

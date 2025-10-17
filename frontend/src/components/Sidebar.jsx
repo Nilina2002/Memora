@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import React from 'react'
+
 
 const Sidebar = ({ onCreate }) => {
     return (
@@ -30,7 +32,7 @@ const Sidebar = ({ onCreate }) => {
             <div className="mt-2 px-2 text-xs uppercase tracking-wide text-gray-500">Folders</div>
             <div className="flex items-center justify-between px-2 text-xs text-gray-500">
                 <div className="flex items-center gap-1">
-                    <span className="icon"/> 
+                    <span className="icon" />
                 </div>
                 <div className="flex items-center gap-2">
                     <button className="text-gray-500">+</button>
