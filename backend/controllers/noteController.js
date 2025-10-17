@@ -1,26 +1,30 @@
 import Note from "../models/noteModel.js";
 
-// CREATE note
 export const createNote = async (req, res) => {
     try {
-        const { title, content, userId } = req.body;
-        const note = await Note.create({ title, content, userId });
+        const { title, content } = req.body;
+        const note = await Note.create({
+            userId: req.user._id,
+            title,
+            content,
+        });
         res.status(201).json(note);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 };
 
+
 // READ all notes for a user
 export const getNotes = async (req, res) => {
     try {
-        const { userId } = req.params;
-        const notes = await Note.find({ userId }).sort({ createdAt: -1 });
+        const notes = await Note.find({ userId: req.user._id }).sort({ createdAt: -1 });
         res.json(notes);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
+
 
 // READ single note
 export const getNoteById = async (req, res) => {
